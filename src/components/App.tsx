@@ -9,6 +9,7 @@ import PokemonDetails from "./PokemonDetails";
 const url = "https://pokeapi.co/api/v2/pokemon?limit=20";
 const App = () => {
   const [pokemons, setPokemons] = useState<IpokemonList>();
+  const [selectedPokemon, setSelectedPokemon] = useState<IPokemon>();
   //fetching pokemon data
   const fetchData = async (url: string) => {
     const res = await fetch(url);
@@ -26,6 +27,7 @@ const App = () => {
     console.log(url);
     const res = await fetch(url);
     const data = await res.json();
+    setSelectedPokemon(data);
     console.log(data);
   };
 
