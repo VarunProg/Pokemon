@@ -57,7 +57,7 @@ const App = () => {
           })}
         </div>
         <div className="right-content">
-          <PokemonDetails />
+          <PokemonDetails selectedPokemon={selectedPokemon} />
         </div>
       </div>
     </main>
