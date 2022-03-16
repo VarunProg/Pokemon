@@ -19,6 +19,9 @@ const App = () => {
     fetchData(url);
   }, []);
 
+  //to get url for details on click
+  const handleClick = () => {};
+
   return (
     <main className="container">
       <div className="buttons">
@@ -34,7 +37,13 @@ const App = () => {
       </div>
       <h3>Varun</h3>
       {pokemons?.results.map((pokemon) => {
-        return <PokemonData key={pokemon.name} pokemon={pokemon} />;
+        return (
+          <PokemonData
+            key={pokemon.name}
+            pokemon={pokemon}
+            onClick={handleClick}
+          />
+        );
       })}
     </main>
   );
