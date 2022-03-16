@@ -57,7 +57,11 @@ const App = () => {
           })}
         </div>
         <div className="right-content">
-          <PokemonDetails selectedPokemon={selectedPokemon} />
+          {selectedPokemon ? (
+            <PokemonDetails selectedPokemon={selectedPokemon} />
+          ) : (
+            <h3>Select PokeMon Name to get it's details</h3>
+          )}
         </div>
       </div>
     </main>
