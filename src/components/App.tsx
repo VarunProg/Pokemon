@@ -4,6 +4,7 @@ import { IPokemon } from "../Types/IpokemonDetails";
 
 import "../styles/App.css";
 import PokemonData from "./PokemonData";
+import PokemonDetails from "./PokemonDetails";
 
 const url = "https://pokeapi.co/api/v2/pokemon?limit=20";
 const App = () => {
@@ -41,15 +42,22 @@ const App = () => {
           Next
         </button>
       </div>
-      {pokemons?.results.map((pokemon) => {
-        return (
-          <PokemonData
-            key={pokemon.name}
-            pokemon={pokemon}
-            onClick={handleClick}
-          />
-        );
-      })}
+      <div className="poke-info">
+        <div className="left-content">
+          {pokemons?.results.map((pokemon) => {
+            return (
+              <PokemonData
+                key={pokemon.name}
+                pokemon={pokemon}
+                onClick={handleClick}
+              />
+            );
+          })}
+        </div>
+        <div className="right-content">
+          <PokemonDetails />
+        </div>
+      </div>
     </main>
   );
 };
