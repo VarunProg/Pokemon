@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IpokemonList } from "../Types/IpokemonList";
+import { IPokemon } from "../Types/IpokemonDetails";
 
 import "../styles/App.css";
 import PokemonData from "./PokemonData";
