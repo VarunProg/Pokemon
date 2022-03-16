@@ -4,13 +4,20 @@ import { IpokemonList } from "../Types/IpokemonList";
 interface Iprops {
   //results values which is an array
   pokemon: IpokemonList["results"][0];
-  onClick: () => void;
+  onClick: (url: string) => void;
 }
 
-const PokemonData = ({ pokemon }: Iprops) => {
+const PokemonData = ({ pokemon, onClick }: Iprops) => {
   return (
     <div className="poke-info">
-      <h3>{pokemon.name}</h3>
+      {/* on onClick event passed pokemon.url and recieved as a parameter */}
+      <h3
+        onClick={() => {
+          onClick(pokemon.url);
+        }}
+      >
+        {pokemon.name}
+      </h3>
     </div>
   );
 };

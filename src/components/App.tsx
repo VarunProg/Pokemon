@@ -20,7 +20,9 @@ const App = () => {
   }, []);
 
   //to get url for details on click
-  const handleClick = () => {};
+  const handleClick = (url: string) => {
+    console.log(url);
+  };
 
   return (
     <main className="container">
