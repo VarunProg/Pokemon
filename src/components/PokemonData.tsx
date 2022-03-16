@@ -18,6 +18,9 @@ const PokemonData = ({ pokemon, onClick }: Iprops) => {
       >
         {pokemon.name}
       </h3>
+      {console.log(pokemon.url)}
+      {/* to get numbers by splitting the url */}
+      <h3>{pokemon.url.split("/").at(-2)}</h3>
     </div>
   );
 };

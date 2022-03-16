@@ -40,7 +40,6 @@ const App = () => {
           Next
         </button>
       </div>
-      <h3>Varun</h3>
       {pokemons?.results.map((pokemon) => {
         return (
           <PokemonData
