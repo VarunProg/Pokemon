@@ -10,7 +10,7 @@ interface Iprops {
 const PokemonData = ({ pokemon, onClick }: Iprops) => {
   return (
     <div className="poke-info">
-      {/* on onClick event passed pokemon.url and recieved as a parameter */}
+      {/* on onClick event passed pokemon.url in onClick function and recieved as a parameter */}
       <h3
         onClick={() => {
           onClick(pokemon.url);

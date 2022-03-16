@@ -20,8 +20,11 @@ const App = () => {
   }, []);
 
   //to get url for details on click
-  const handleClick = (url: string) => {
+  const handleClick = async (url: string) => {
     console.log(url);
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
   };
 
   return (
