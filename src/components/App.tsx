@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 import { IpokemonList } from "../Types/IpokemonList";
 import { IPokemon } from "../Types/IpokemonDetails";
 
@@ -30,7 +31,44 @@ const App = () => {
     setSelectedPokemon(data);
     console.log(data);
   };
-
+  // const Home = () => {
+  //   return (
+  //     <div>
+  //       <div className="buttons">
+  //         <button
+  //           onClick={() => {
+  //             //if there is no click simply return else fetchData pokemons.next
+  //             if (!pokemons?.next) return;
+  //             fetchData(pokemons.next);
+  //           }}
+  //         >
+  //           Next
+  //         </button>
+  //       </div>
+  //       <div className="poke-info">
+  //         <div className="left-content">
+  //           {pokemons?.results.map((pokemon) => {
+  //             return (
+  //               <PokemonData
+  //                 key={pokemon.name}
+  //                 pokemon={pokemon}
+  //                 onClick={handleClick}
+  //               />
+  //             );
+  //           })}
+  //         </div>
+  //         <Outlet />
+  //         {/* <div className="right-content">
+  //         {selectedPokemon ? (
+  //           <PokemonDetails selectedPokemon={selectedPokemon} />
+  //         ) : (
+  //           <h3>Select PokeMon Name to get it's details</h3>
+  //         )}
+  //       </div> */}
+  //       </div>
+  //     </div>
+  //   );
+  // };
   return (
     <main className="container">
       <div className="buttons">
@@ -60,7 +98,7 @@ const App = () => {
           {selectedPokemon ? (
             <PokemonDetails selectedPokemon={selectedPokemon} />
           ) : (
-            <h3>Select PokeMon Name to get it's details</h3>
+            <h3>Select PokeMon Name to get pokemon details</h3>
           )}
         </div>
       </div>
