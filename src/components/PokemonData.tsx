@@ -10,6 +10,8 @@ interface Iprops {
 const PokemonData = ({ pokemon, onClick }: Iprops) => {
   return (
     <div className="poke-info">
+      {/* to get numbers by splitting the url */}
+      <h3>{pokemon.url.split("/").at(-2)}</h3>
       {/* on onClick event passed pokemon.url in onClick function and recieved as a parameter */}
       <h3
         onClick={() => {
@@ -19,8 +21,6 @@ const PokemonData = ({ pokemon, onClick }: Iprops) => {
         {pokemon.name}
       </h3>
       {console.log(pokemon.url)}
-      {/* to get numbers by splitting the url */}
-      <h3>{pokemon.url.split("/").at(-2)}</h3>
     </div>
   );
 };
