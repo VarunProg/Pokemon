@@ -72,6 +72,16 @@ const App = () => {
   return (
     <main className="container">
       <div className="buttons">
+        {/* if previous value is fales then button disabled and if pokemons.previous not selected simpl retun else call pokemons.previous */}
+        <button
+          disabled={pokemons?.previous ? false : true}
+          onClick={() => {
+            if (!pokemons?.previous) return;
+            fetchData(pokemons.previous);
+          }}
+        >
+          Previous
+        </button>
         <button
           onClick={() => {
             //if there is no click simply return else fetchData pokemons.next
