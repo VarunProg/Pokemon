@@ -108,7 +108,7 @@ const App = () => {
           {selectedPokemon ? (
             <PokemonDetails selectedPokemon={selectedPokemon} />
           ) : (
-            <h3>Select PokeMon Name to get pokemon details</h3>
+            <h4>Select Pokemon Name</h4>
           )}
         </div>
       </div>

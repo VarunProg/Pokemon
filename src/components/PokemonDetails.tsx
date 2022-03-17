@@ -7,7 +7,11 @@ interface PokemonDetailProps {
 const PokemonDetails = ({ selectedPokemon }: PokemonDetailProps) => {
   return (
     <div className="pokeDetails">
-      <img width="200px" src={selectedPokemon.sprites.front_default} alt="" />
+      <img
+        width="200px"
+        src={selectedPokemon.sprites.front_default}
+        alt="pokemonImage"
+      />
       {/* to get pokemon type */}
       <h3>{selectedPokemon.types[0].type.name}</h3>
       {/* to get pokemon stats */}
