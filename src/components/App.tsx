@@ -9,6 +9,7 @@ import PokemonDetails from "./PokemonDetails";
 
 // const url = "https://pokeapi.co/api/v2/pokemon?limit=20";
 const url = "https://pokeapi.co/api/v2/pokemon";
+
 const App = () => {
   const [pokemons, setPokemons] = useState<IpokemonList>();
 
