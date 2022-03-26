@@ -1,10 +1,14 @@
 import React, { Fragment } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import { IPokemon } from "../Types/IpokemonDetails";
 
-interface PokemonDetailProps {
-  selectedPokemon: IPokemon;
-}
-const PokemonDetails = ({ selectedPokemon }: PokemonDetailProps) => {
+const PokemonDetails = () => {
+  const { id } = useParams();
+  console.log(id);
+  const location = useLocation();
+  // console.log("history state", location.state);
+  const selectedPokemon = location.state as IPokemon;
+
   return (
     <div className="pokeDetails">
       <img
