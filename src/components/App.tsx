@@ -14,7 +14,7 @@ const App = () => {
 
   //to hold the records, taking refernce
   const savedPokemons = useRef<Record<string, IPokemon>>({});
-  console.log(savedPokemons, "useref");
+  // console.log(savedPokemons, "useref");
 
   // useNavigate used for links
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const App = () => {
   const fetchData = async (url: string) => {
     const res = await fetch(`${url}?limit=20`);
     const data = await res.json();
-    console.log(data);
+    // console.log(data)
     setPokemons(data);
   };
 
