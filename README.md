@@ -11,6 +11,6 @@ Pokemon App built using react, hooks, React Router Version6, async await for fet
 - Cache API calls.
 - Selecting a pokemon updates the url route.
 
-
-## Used Technologies: 
+ 
+## 🛠 Skills Used
 ReactJS, TypeScript, HTML & CSS.
