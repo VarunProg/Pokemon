@@ -43,14 +43,18 @@ body {
 
 .pokeDetails {
   /* flex-basis: 50%; */
-  display: flex;
+  /* display: flex; */
   /* justify-content: center; */
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 .pokeDetails h3 {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  margin-bottom: 7px;
+  margin-bottom: 7px; */
+  margin-bottom: 15px;
+  /* margin-left: 80px; */
+
+  text-align: center;
 }
 h4 {
   margin-top: 30px;
@@ -59,7 +63,7 @@ h4 {
 
 @media only screen and (min-width: 600px) {
   .left-content {
-    flex-basis: 50%;
+    flex-basis: 30%;
   }
   .poke-data {
     width: 350px;
